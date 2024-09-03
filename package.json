@@ -1,0 +1,54 @@
+{
+	"name": "unist-util-flatmap",
+	"version": "1.0.0",
+	"description": "Flatmap for unist nodes (useful for transforming trees) without mutating them.",
+	"type": "module",
+	"main": "dist/mjs/index.js",
+	"exports": {
+		".": {
+			"default": "./dist/esm/index.js",
+			"import": {
+				"default": "./dist/esm/index.js",
+				"types": "./dist/esm/index.d.ts"
+			},
+			"require": {
+				"default": "./dist/index.js",
+				"types": "./dist/index.d.ts"
+			}
+		},
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "duel",
+		"test": "vitest"
+	},
+	"keywords": [
+		"unist",
+		"flatmap"
+	],
+	"author": {
+		"email": "mhgibbons@me.com",
+		"name": "Matthew Gibbons",
+		"url": "https://github.com/accuser"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/accuser/unist-util-flatmap.git"
+	},
+	"bugs": {
+		"url": "https://github.com/accuser/unist-util-flatmap/issues"
+	},
+	"devDependencies": {
+		"@knighted/duel": "^1.0.8",
+		"@types/unist": "^3.0.3",
+		"eslint": "^9.9.1",
+		"prettier": "^3.3.3",
+		"typescript": "^5.5.4",
+		"unist-builder": "^4.0.0",
+		"vitest": "^2.0.5"
+	}
+}
