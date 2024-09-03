@@ -1,4 +1,5 @@
 import type { Node } from 'unist';
+type FlatMapFunction = (node: import('unist').Node, index: number, parent?: import('unist').Parent) => import('unist').Node[];
 /**
  * Create a new tree by flat mapping all nodes with the given function.
  *
