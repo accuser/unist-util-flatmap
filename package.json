@@ -23,6 +23,8 @@
 	],
 	"scripts": {
 		"build": "duel",
+		"format": "prettier --write {src,test}/**/*.{js,ts}",
+		"lint": "eslint",
 		"test": "vitest"
 	},
 	"keywords": [
@@ -44,10 +46,14 @@
 	},
 	"devDependencies": {
 		"@knighted/duel": "^1.0.8",
+		"@types/eslint": "^9.6.1",
+		"@types/eslint-config-prettier": "^6.11.3",
 		"@types/unist": "^3.0.3",
 		"eslint": "^9.9.1",
+		"eslint-config-prettier": "^9.1.0",
 		"prettier": "^3.3.3",
 		"typescript": "^5.5.4",
+		"typescript-eslint": "^8.4.0",
 		"unist-builder": "^4.0.0",
 		"vitest": "^2.0.5"
 	}
