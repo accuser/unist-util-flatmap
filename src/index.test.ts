@@ -10,18 +10,19 @@ describe('transform', () => {
 		u('leaf', 'leaf 3')
 	]);
 
+	const flatMapFunction = (node: import('unist').Node) =>
+		node.type === 'leaf' ? [u('leaf', 'Modified')] : [node];
+
 	it('should apply the callback function to each node in the tree', () => {
 		const flatMapFunction = vi.fn((node: import('unist').Node) => [node]);
 
-		const result = flatMap(tree, flatMapFunction);
+		void flatMap(tree, flatMapFunction);
 
 		expect(flatMapFunction).toHaveBeenCalledTimes(6);
 	});
 
 	it('should return the modified tree', () => {
-		const result = flatMap(tree, (node) =>
-			node.type === 'leaf' ? [u('leaf', 'Modified')] : [node]
-		);
+		const result = flatMap(tree, flatMapFunction);
 
 		expect(result).toEqual(
 			u('tree', [
@@ -34,7 +35,7 @@ describe('transform', () => {
 	});
 
 	it('should not mutate the source tree', () => {
-		void flatMap(tree, (node) => (node.type === 'leaf' ? [u('leaf', 'Modified')] : [node]));
+		void flatMap(tree, flatMapFunction);
 
 		expect(tree).toEqual(
 			u('tree', [
