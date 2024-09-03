@@ -3,17 +3,17 @@
 	"version": "1.0.0",
 	"description": "Flatmap for unist nodes (useful for transforming trees) without mutating them.",
 	"type": "module",
-	"main": "dist/esm/index.js",
+	"main": "./dist/index.js",
 	"exports": {
 		".": {
-			"default": "./dist/esm/index.js",
+			"default": "./dist/index.js",
 			"import": {
-				"default": "./dist/esm/index.js",
-				"types": "./dist/esm/index.d.ts"
-			},
-			"require": {
 				"default": "./dist/index.js",
 				"types": "./dist/index.d.ts"
+			},
+			"require": {
+				"default": "./dist/cjs/index.js",
+				"types": "./dist/cjs/index.d.ts"
 			}
 		},
 		"./package.json": "./package.json"
