@@ -1,6 +1,6 @@
 # unist-util-flatmap
 
-[![npm version](https://badge.fury.io/js/%40accuser%2Fmdast-util-flatmap.svg)](https://badge.fury.io/js/%40accuser%2Fmdast-util-flatmap)
+[![npm version](https://badge.fury.io/js/@accuser%2Funist-util-flatmap.svg)](https://badge.fury.io/js/@accuser%2Funist-util-flatmap)
 
 Create a new [unist](https://github.com/syntax-tree/unist) tree by mapping over all nodes and flattening the result *without* mutating the original tree.
 
