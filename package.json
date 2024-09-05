@@ -1,6 +1,6 @@
 {
 	"name": "@accuser/unist-util-flatmap",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Flatmap for unist nodes (useful for transforming trees) without mutating them.",
 	"type": "module",
 	"main": "dist/index.js",
@@ -48,7 +48,6 @@
 		"@knighted/duel": "^1.0.8",
 		"@types/eslint": "^9.6.1",
 		"@types/eslint-config-prettier": "^6.11.3",
-		"@types/unist": "^3.0.3",
 		"eslint": "^9.9.1",
 		"eslint-config-prettier": "^9.1.0",
 		"prettier": "^3.3.3",
@@ -56,5 +55,8 @@
 		"typescript-eslint": "^8.4.0",
 		"unist-builder": "^4.0.0",
 		"vitest": "^2.0.5"
+	},
+	"dependencies": {
+		"@types/unist": "^3.0.3"
 	}
 }

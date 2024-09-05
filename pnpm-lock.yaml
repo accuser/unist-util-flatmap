@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@types/unist':
+        specifier: ^3.0.3
+        version: 3.0.3
     devDependencies:
       '@knighted/duel':
         specifier: ^1.0.8
@@ -17,9 +21,6 @@ importers:
       '@types/eslint-config-prettier':
         specifier: ^6.11.3
         version: 6.11.3
-      '@types/unist':
-        specifier: ^3.0.3
-        version: 3.0.3
       eslint:
         specifier: ^9.9.1
         version: 9.9.1
