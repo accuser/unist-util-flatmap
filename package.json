@@ -1,6 +1,6 @@
 {
 	"name": "@accuser/unist-util-flatmap",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Flatmap for unist nodes (useful for transforming trees) without mutating them.",
 	"type": "module",
 	"main": "dist/index.js",
