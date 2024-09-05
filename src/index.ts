@@ -1,10 +1,6 @@
 import type { Node, Parent } from 'unist';
 
-type FlatMapFunction = (
-	node: import('unist').Node,
-	index: number,
-	parent?: import('unist').Parent
-) => import('unist').Node[];
+type FlatMapFunction = (node: Node, index: number, parent?: Parent) => import('unist').Node[];
 
 /**
  * Type guard to check if a node is a {@link Parent} node.
