@@ -7,15 +7,15 @@ type FlatMapFunction = (
 ) => import('unist').Node[];
 
 /**
- * Type guard to check if a `node` is a parent node.
+ * Type guard to check if a node is a {@link Parent} node.
  *
  * @param {Node} node - The node to check.
- * @returns {boolean} - Whether the node is a `Parent` node.
+ * @returns {boolean} - Whether the node is a {@link Parent} node.
  */
 const isParent = (node: Node): node is Parent => 'children' in node && Array.isArray(node.children);
 
 /**
- * Create a new tree by flat mapping all nodes with the given function.
+ * Create a new tree by mapping over all nodes and flattening the result without mutating the original tree.
  *
  * @param {Node} tree - Tree to flat map.
  * @param {FlatMapFunction} flatMapFunction - Function called with a node, its index, and its parent to produce new
